@@ -82,10 +82,7 @@ def analyze_application(request, pk):
     SUGGESTIONS: [list suggestions]
     """
 
-    # genai.configure(api_key=os.getenv('GEMINI_API_KEY'))
-    # model = genai.GenerativeModel('gemini-2.0-flash-exp')
-    # response = model.generate_content(prompt)
-    # feedback = response.text
+
 
     client = Groq(api_key=os.getenv('GROQ_API_KEY'))
     chat = client.chat.completions.create(
